@@ -10,7 +10,8 @@
   .sidebar-container {
     transition: width 0.28s;
     width: $sideBarWidth !important;
-    background-color: $menuBg;
+    // background-color: $menuBg;
+    background: -webkit-linear-gradient(bottom, #3d6df8, #5b8cff);
     height: 100%;
     position: fixed;
     font-size: 0px;
@@ -26,6 +27,7 @@
     }
 
     .scrollbar-wrapper {
+      background: url('~@/assets/common/leftnavBg.png') no-repeat 0 100%;
       overflow-x: hidden !important;
     }
 
@@ -73,11 +75,17 @@
     .el-submenu__title {
       &:hover {
         background-color: $menuHover !important;
+        color: $menuActiveText !important
       }
     }
 
     .is-active>.el-submenu__title {
       color: $subMenuActiveText !important;
+    }
+
+    .is-active {
+      background-color: $menuHover !important;
+      color: $menuActiveText !important
     }
 
     & .nest-menu .el-submenu>.el-submenu__title,
@@ -191,6 +199,7 @@
     .svg-icon {
       margin-right: 16px;
     }
+
     .sub-el-icon {
       margin-right: 12px;
       margin-left: -2px;
